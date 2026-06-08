@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/coteimmo_v2.html" }
+  ]
+}
