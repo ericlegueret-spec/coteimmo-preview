@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/coteimmo-preview.html" }
+    { "source": "/", "destination": "/coteimmo-preview-V3.html" }
   ]
 }
