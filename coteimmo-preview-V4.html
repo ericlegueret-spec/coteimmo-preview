@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Côté Immo — Agence Immobilière Mouscron | Vente, Location, Estimation</title>
+<meta name="description" content="Agence immobilière Côté Immo à Mouscron — vente, location, estimation gratuite. Expert local depuis 2006 sur Mouscron, Herseaux, Dottignies, Luingne. Agréé IPI 503 181.">
+<meta name="keywords" content="agence immobilière Mouscron, maison à vendre Mouscron, appartement à louer Mouscron, estimation gratuite Mouscron, Herseaux, Dottignies, Luingne, Côté Immo">
+<meta property="og:title" content="Côté Immo — Agence Immobilière Mouscron">
+<meta property="og:description" content="Estimation gratuite, vente et location à Mouscron et environs. Expert local depuis 2006. Agréé IPI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coteimmo-preview.vercel.app">
+<meta property="og:locale" content="fr_BE">
+<link rel="alternate" hreflang="fr-BE" href="https://coteimmo-preview.vercel.app">
+<link rel="alternate" hreflang="fr-FR" href="https://coteimmo-preview.vercel.app">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Côté Immo",
+  "alternateName": "Cote Immo Mouscron",
+  "description": "Agence immobilière à Mouscron spécialisée dans la vente, location et gestion de biens immobiliers depuis 2006. Expert local agréé IPI sur Mouscron, Herseaux, Dottignies et Luingne.",
+  "url": "https://coteimmo-preview.vercel.app",
+  "telephone": "+3256340340",
+  "email": "info@coteimmo.be",
+  "foundingDate": "2006",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue de Courtrai 28",
+    "addressLocality": "Mouscron",
+    "postalCode": "7700",
+    "addressCountry": "BE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "50.7453",
+    "longitude": "3.2163"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "13:00"
+    }
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Mouscron"},
+    {"@type": "City", "name": "Herseaux"},
+    {"@type": "City", "name": "Dottignies"},
+    {"@type": "City", "name": "Luingne"}
+  ],
+  "hasCredential": "IPI 503 181",
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Emile Seguin",
+      "jobTitle": "Directeur — Agent Immobilier Agréé IPI",
+      "telephone": "+32499155347"
+    },
+    {
+      "@type": "Person",
+      "name": "Priscilla",
+      "jobTitle": "Déléguée Commerciale"
+    },
+    {
+      "@type": "Person",
+      "name": "Fauve",
+      "jobTitle": "Conseillère Location"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --vert:#0F3D22;--vert-m:#1A5C35;--vert-l:#2A7A48;
+  --or:#B8913A;--or-l:#D4AA58;--or-pale:#F0E6C8;
+  --ivoire:#FAF8F3;--creme:#F2EDE3;
+  --noir:#0D0D0D;--gris:#8A8880;--gris-l:#D8D4CB;
+  --display:'Cormorant Garamond',Georgia,serif;
+  --body:'Outfit',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--ivoire);color:var(--noir);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:72px;padding:0 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .4s,border-color .4s;
+}
+nav.scrolled{background:rgba(250,248,243,.97);border-bottom:1px solid var(--gris-l);backdrop-filter:blur(12px)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-box{width:38px;height:38px;border:1.5px solid var(--or);border-radius:3px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.nav-logo-box::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55%;background:var(--or);clip-path:polygon(50% 0%,100% 100%,0% 100%)}
+.nav-logo-name{font-family:var(--display);font-size:1.2rem;font-weight:600;color:var(--ivoire);letter-spacing:.04em;transition:color .3s}
+nav.scrolled .nav-logo-name{color:var(--vert)}
+.nav-links{list-style:none;display:flex;align-items:center;gap:2.5rem}
+.nav-links a{font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+nav.scrolled .nav-links a{color:var(--gris)}
+.nav-links a:hover{color:var(--or)}
+nav.scrolled .nav-links a:hover{color:var(--vert)}
+.nav-cta{background:var(--or)!important;color:var(--vert)!important;padding:.6rem 1.4rem!important;border-radius:2px!important;font-weight:600!important;letter-spacing:.08em!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--or-l)!important}
+
+/* ── HERO ── */
+.hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,30,18,.35) 0%,rgba(10,30,18,.2) 40%,rgba(10,30,18,.75) 100%)}
+
+/* Gold line animation */
+.hero-line{
+  position:absolute;top:0;left:50%;width:1px;height:0;
+  background:linear-gradient(to bottom,transparent,rgba(184,145,58,.5),transparent);
+  animation:lineDown 1.8s ease forwards .3s;
+}
+@keyframes lineDown{to{height:100%}}
+
+.hero-content{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);
+  text-align:center;width:100%;max-width:900px;padding:0 2rem;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--or-l);margin-bottom:1.5rem;
+  opacity:0;animation:fadeUp .8s ease forwards .6s;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:24px;height:1px;background:var(--or-l)}
+.hero-title{
+  font-family:var(--display);font-size:clamp(3.5rem,7vw,6.5rem);
+  font-weight:300;line-height:1.02;color:#fff;letter-spacing:-.01em;
+  opacity:0;animation:fadeUp .8s ease forwards .8s;
+}
+.hero-title strong{font-weight:700;font-style:italic;display:block;color:var(--or-l)}
+.hero-sub{
+  font-size:1rem;font-weight:300;color:rgba(255,255,255,.7);
+  margin-top:1.2rem;letter-spacing:.04em;
+  opacity:0;animation:fadeUp .8s ease forwards 1s;
+}
+
+/* Barre d'action ancrée en bas — pattern Sotheby's */
+.hero-bar{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(10,30,18,.88);backdrop-filter:blur(16px);
+  border-top:1px solid rgba(184,145,58,.2);
+  padding:1.5rem 3rem;
+  display:flex;align-items:center;gap:2rem;
+  opacity:0;animation:fadeUp .6s ease forwards 1.2s;
+}
+.hero-bar-tabs{display:flex;gap:0;flex-shrink:0}
+.hbar-tab{
+  padding:.6rem 1.4rem;font-family:var(--body);font-size:.78rem;
+  font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);cursor:pointer;border:none;background:none;
+  border-bottom:2px solid transparent;transition:all .2s;
+}
+.hbar-tab.active{color:var(--or);border-bottom-color:var(--or)}
+.hbar-sep{width:1px;height:40px;background:rgba(255,255,255,.1);flex-shrink:0}
+.hbar-fields{display:flex;align-items:center;gap:1.5rem;flex:1}
+.hbar-field{display:flex;flex-direction:column;gap:3px;flex:1}
+.hbar-label{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.hbar-select{
+  background:none;border:none;outline:none;
+  font-family:var(--body);font-size:.9rem;font-weight:400;
+  color:#fff;cursor:pointer;
+  appearance:none;-webkit-appearance:none;
+}
+.hbar-select option{background:var(--vert);color:#fff}
+.hbar-btn{
+  background:var(--or);color:var(--vert);
+  padding:.85rem 2rem;border:none;border-radius:2px;
+  font-family:var(--body);font-size:.82rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  cursor:pointer;flex-shrink:0;white-space:nowrap;
+  transition:background .2s;
+}
+.hbar-btn:hover{background:var(--or-l)}
+.hero-scroll{
+  position:absolute;bottom:100px;right:3rem;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+}
+.hero-scroll-line{width:1px;height:40px;background:rgba(255,255,255,.2);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── STATS ── */
+.stats{background:var(--vert);padding:2.5rem 3rem}
+.stats-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:1.5rem}
+.stat{text-align:center}
+.stat-n{font-family:var(--display);font-size:2.8rem;font-weight:700;color:var(--or-l);line-height:1}
+.stat-l{font-size:.72rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px}
+.stats-sep{width:1px;height:48px;background:rgba(255,255,255,.1)}
+
+/* ── SECTIONS BASE ── */
+.s{padding:6rem 3rem}
+.s-container{max-width:1140px;margin:0 auto}
+.s-eyebrow{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:1rem}
+.s-eyebrow::before{content:'';width:24px;height:1px;background:var(--or);flex-shrink:0}
+.s-title{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.6rem);font-weight:300;color:var(--vert);line-height:1.1;letter-spacing:-.01em}
+.s-title strong{font-weight:700;font-style:italic}
+.s-sub{font-size:.95rem;font-weight:300;color:var(--gris);line-height:1.8;max-width:480px;margin-top:.75rem}
+
+/* ── BIENS — grille asymétrique Sotheby's ── */
+#biens{background:var(--ivoire);padding-bottom:0}
+.biens-header{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+
+/* Grille : 1 grande gauche + 2 empilées droite */
+.biens-grid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  grid-template-rows:auto auto;
+  gap:3px;
+  background:var(--gris-l);
+}
+.bien-card{
+  background:var(--noir);
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+}
+/* Grande carte à gauche — occupe 2 lignes */
+.bien-card:first-child{
+  grid-row: 1 / 3;
+}
+/* Photo */
+.bien-photo{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+.bien-card:first-child .bien-photo{ height:100%;min-height:560px; }
+.bien-card:not(:first-child) .bien-photo{ height:280px; }
+
+.bien-photo img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transition:transform .9s cubic-bezier(.25,.46,.45,.94), filter .6s ease;
+  filter:brightness(.92) saturate(1.05);
+}
+.bien-card:hover .bien-photo img{
+  transform:scale(1.05);
+  filter:brightness(1) saturate(1.1);
+}
+
+/* Overlay élégant — révèle au hover */
+.bien-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,25,15,.85) 0%,rgba(10,25,15,.1) 50%,transparent 100%);
+  transition:opacity .4s ease;
+}
+.bien-card:hover .bien-overlay{
+  background:linear-gradient(to top,rgba(10,25,15,.92) 0%,rgba(10,25,15,.25) 60%,transparent 100%);
+}
+
+/* Contenu sur la photo */
+.bien-body{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:2rem;
+  transform:translateY(6px);
+  transition:transform .4s ease;
+}
+.bien-card:hover .bien-body{ transform:translateY(0); }
+
+.bien-badge{
+  display:inline-block;
+  font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 12px;margin-bottom:.75rem;
+}
+.bien-badge.vente{background:var(--or);color:var(--vert)}
+.bien-badge.loc{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2)}
+
+.bien-lieu{
+  font-size:.68rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-bottom:.4rem;
+}
+.bien-prix{
+  font-family:var(--display);
+  font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem;
+}
+.bien-card:first-child .bien-prix{font-size:2.2rem}
+.bien-card:not(:first-child) .bien-prix{font-size:1.6rem}
+
+.bien-specs{
+  display:flex;gap:.75rem;
+  font-size:.75rem;color:rgba(255,255,255,.55);font-weight:300;
+  margin-bottom:1rem;
+}
+.bien-lien{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--or-l);text-decoration:none;
+  opacity:0;transform:translateY(6px);
+  transition:opacity .35s ease .1s, transform .35s ease .1s, gap .2s;
+}
+.bien-card:hover .bien-lien{opacity:1;transform:translateY(0)}
+.bien-lien:hover{gap:10px}
+.bien-lien svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5}
+
+/* Ligne or en bas au hover */
+.bien-line{
+  position:absolute;bottom:0;left:0;
+  width:0;height:2px;background:var(--or);
+  transition:width .5s ease;
+}
+.bien-card:hover .bien-line{width:100%}
+
+.voir-tout{
+  display:block;background:var(--creme);border-top:1px solid var(--gris-l);
+  text-align:center;padding:1.5rem;
+  font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gris);text-decoration:none;transition:background .2s,color .2s;
+  margin-top:3px;
+}
+.voir-tout:hover{background:var(--vert);color:var(--or-pale)}
+
+/* ── ESTIMATION INLINE ── */
+#estimation{background:var(--creme)}
+.estim-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.form-shell{background:var(--ivoire);border-top:3px solid var(--or)}
+
+/* Tabs */
+.form-tabs{display:flex;border-bottom:1px solid var(--gris-l)}
+.ftab{flex:1;padding:1rem;text-align:center;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gris);border-bottom:2px solid transparent;cursor:pointer;transition:all .2s;margin-bottom:-1px}
+.ftab.active{color:var(--vert);border-bottom-color:var(--vert)}
+.ftab.done{color:var(--or)}
+
+.form-inner{padding:2.5rem}
+.fstep{display:none}
+.fstep.active{display:block;animation:fadeUp .3s ease}
+.fstep-num{font-family:var(--display);font-size:4rem;font-weight:700;color:var(--gris-l);line-height:1;margin-bottom:.5rem}
+.fstep-q{font-family:var(--display);font-size:1.4rem;font-weight:600;color:var(--vert);margin-bottom:1.5rem;line-height:1.2}
+.fopts{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-bottom:1.5rem}
+.fopt{border:1px solid var(--gris-l);background:var(--creme);padding:.9rem 1rem;cursor:pointer;border-radius:2px;font-family:var(--body);text-align:center;font-size:.88rem;font-weight:500;transition:all .2s}
+.fopt:hover{border-color:var(--vert);background:var(--ivoire)}
+.fopt.sel{background:var(--vert);border-color:var(--vert);color:#fff}
+.ffields{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem}
+.ffield{display:flex;flex-direction:column;gap:5px}
+.ffield.full{grid-column:1/-1}
+.ffield label{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gris)}
+.ffield input{padding:.8rem 1rem;border:1px solid var(--gris-l);border-radius:2px;font-family:var(--body);font-size:.92rem;color:var(--noir);background:var(--creme);outline:none;width:100%;transition:border-color .2s}
+.ffield input:focus{border-color:var(--vert);background:var(--ivoire)}
+.fnav{display:flex;align-items:center;justify-content:space-between;padding-top:1.25rem;border-top:1px solid var(--gris-l)}
+.fbtn-back{font-family:var(--body);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);background:none;border:none;cursor:pointer;transition:color .2s}
+.fbtn-back:hover{color:var(--vert)}
+.fbtn-next{background:var(--vert);color:#fff;padding:.75rem 1.8rem;border:none;border-radius:2px;font-family:var(--body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.fbtn-next:hover{background:var(--vert-m)}
+.fmicro{text-align:center;font-size:.75rem;color:var(--gris);margin-top:.75rem;display:flex;align-items:center;justify-content:center;gap:5px}
+.fmicro svg{width:12px;height:12px;stroke:var(--gris);fill:none;stroke-width:2;flex-shrink:0}
+.fsuccess{display:none;text-align:center;padding:3rem 2rem}
+.fsuccess.active{display:block;animation:fadeUp .4s ease}
+.fcheck{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--or);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.fcheck svg{width:24px;height:24px;stroke:var(--or);fill:none;stroke-width:2.5}
+.fsuccess h3{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--vert);margin-bottom:.75rem}
+.fsuccess p{font-size:.9rem;color:var(--gris);line-height:1.8;max-width:340px;margin:0 auto}
+
+/* Colonne gauche estimation */
+.estim-left{padding-top:1rem}
+.estim-promesse{font-family:var(--display);font-size:1.05rem;font-style:italic;color:var(--gris);line-height:1.7;margin-top:1.5rem;padding-left:1.25rem;border-left:2px solid var(--or-l)}
+.estim-points{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
+.estim-point{display:flex;align-items:flex-start;gap:.75rem;font-size:.88rem;color:var(--gris);line-height:1.6}
+.estim-point::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--or);flex-shrink:0;margin-top:6px}
+
+/* ── QUARTIERS ── */
+#quartiers{background:var(--vert);padding:6rem 3rem}
+#quartiers .s-eyebrow{color:var(--or-l)}
+#quartiers .s-eyebrow::before{background:var(--or-l)}
+#quartiers .s-title{color:var(--ivoire)}
+#quartiers .s-sub{color:rgba(250,248,243,.55)}
+.quartiers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:3rem}
+.quartier-card{position:relative;overflow:hidden;cursor:pointer;height:280px;background:rgba(255,255,255,.04)}
+.qcard-img{width:100%;height:100%;object-fit:cover;display:block;opacity:.5;transition:opacity .4s,transform .6s}
+.quartier-card:hover .qcard-img{opacity:.7;transform:scale(1.04)}
+.qcard-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,30,18,.85) 0%,transparent 60%)}
+.qcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.5rem}
+.qcard-name{font-family:var(--display);font-size:1.3rem;font-weight:600;color:#fff;margin-bottom:4px}
+.qcard-info{font-size:.72rem;font-weight:400;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase}
+.qcard-line{position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--or);transition:width .4s ease}
+.quartier-card:hover .qcard-line{width:100%}
+
+/* ── AVIS ── */
+#avis{background:var(--creme)}
+.avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gris-l);margin-top:3rem}
+.avis-card{background:var(--ivoire);padding:2rem;position:relative;transition:background .2s}
+.avis-card:hover{background:var(--creme)}
+.avis-quote{font-family:var(--display);font-size:3.5rem;color:var(--or-pale);position:absolute;top:.5rem;right:1.5rem;line-height:1}
+.avis-stars{color:var(--or);font-size:.8rem;letter-spacing:3px;margin-bottom:1rem}
+.avis-txt{font-family:var(--display);font-size:1rem;font-style:italic;color:var(--noir);line-height:1.7;margin-bottom:1.25rem}
+.avis-by{display:flex;align-items:center;gap:10px}
+.avis-av{width:36px;height:36px;border-radius:50%;background:var(--vert);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--or-pale);flex-shrink:0}
+.avis-nom{font-size:.85rem;font-weight:600;color:var(--noir)}
+.avis-lieu{font-size:.75rem;color:var(--gris)}
+.avis-global{display:flex;align-items:center;gap:2rem;margin-top:3rem;padding-top:3rem;border-top:1px solid var(--gris-l);justify-content:center}
+.ag-n{font-family:var(--display);font-size:4rem;font-weight:700;color:var(--vert);line-height:1}
+.ag-stars{color:var(--or);font-size:1rem;letter-spacing:3px;margin-bottom:3px}
+.ag-count{font-size:.8rem;color:var(--gris)}
+
+/* ── CE QUE VOUS ACHETEZ ── */
+#offre{background:var(--noir);padding:6rem 3rem}
+.offre-eyebrow{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:1rem}
+.offre-eyebrow::before{content:'';width:24px;height:1px;background:var(--or)}
+.offre-title{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:300;color:var(--ivoire);line-height:1.1}
+.offre-title strong{font-weight:700;font-style:italic;color:var(--or-l)}
+.offre-sub{font-size:.9rem;color:rgba(255,255,255,.4);margin-top:.75rem;max-width:480px;line-height:1.8}
+.offre-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:3.5rem}
+.offre-card{background:rgba(255,255,255,.03);padding:2.5rem;border-top:1px solid rgba(255,255,255,.06);transition:background .2s}
+.offre-card:hover{background:rgba(255,255,255,.06)}
+.offre-num{font-family:var(--display);font-size:4rem;font-weight:700;color:rgba(184,145,58,.15);line-height:1;margin-bottom:1.5rem}
+.offre-nom{font-family:var(--display);font-size:1.25rem;font-weight:600;color:var(--ivoire);margin-bottom:.5rem}
+.offre-desc{font-size:.85rem;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:1.5rem}
+.offre-items{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.offre-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.5}
+.offre-item::before{content:'✓';color:var(--or);flex-shrink:0;font-size:.78rem;margin-top:1px}
+.offre-prix{
+  display:inline-flex;align-items:baseline;gap:4px;
+  font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--or-l);
+  margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);
+}
+.offre-prix span{font-family:var(--body);font-size:.78rem;color:rgba(255,255,255,.3);font-weight:300}
+.offre-cta{display:block;text-align:center;background:var(--or);color:var(--vert);padding:1.5rem;font-family:var(--body);font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;margin-top:2px;border:none;cursor:pointer;width:100%;transition:background .2s}
+.offre-cta:hover{background:var(--or-l)}
+
+/* ── CONTACT ── */
+#contact{background:var(--vert);padding:6rem 3rem}
+#contact .s-eyebrow{color:var(--or-l)}
+#contact .s-eyebrow::before{background:var(--or-l)}
+#contact .s-title{color:var(--ivoire)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:3.5rem;align-items:start}
+.cinfo-item{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.cinfo-item:first-child{border-top:1px solid rgba(255,255,255,.06)}
+.cinfo-icon{width:36px;height:36px;border:1px solid rgba(184,145,58,.3);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cinfo-icon svg{width:16px;height:16px;stroke:var(--or);fill:none;stroke-width:1.5}
+.cinfo-lbl{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:3px}
+.cinfo-val{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.85);line-height:1.6}
+.cform{background:var(--ivoire);border-top:3px solid var(--or);padding:2.5rem}
+.cform-title{font-family:var(--display);font-size:1.2rem;font-weight:600;color:var(--vert);margin-bottom:1.5rem}
+.cfields{display:flex;flex-direction:column;gap:.75rem}
+.cfield{display:flex;flex-direction:column;gap:5px}
+.cfield label{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gris)}
+.cfield input,.cfield textarea{padding:.8rem 1rem;border:1px solid var(--gris-l);border-radius:2px;font-family:var(--body);font-size:.92rem;color:var(--noir);background:var(--creme);outline:none;width:100%;transition:border-color .2s}
+.cfield input:focus,.cfield textarea:focus{border-color:var(--vert);background:var(--ivoire)}
+.cfield textarea{resize:vertical;min-height:100px}
+.cbtn{width:100%;background:var(--vert);color:#fff;padding:1rem;border:none;border-radius:2px;font-family:var(--body);font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s;margin-top:.5rem}
+.cbtn:hover{background:var(--vert-m)}
+
+/* ── FOOTER ── */
+footer{background:var(--noir);padding:3rem}
+.foot-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;padding-bottom:2rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.foot-logo{font-family:var(--display);font-size:1.4rem;font-weight:600;color:var(--ivoire)}
+.foot-logo span{color:var(--or)}
+.foot-slogan{font-family:var(--display);font-size:.85rem;font-style:italic;color:rgba(255,255,255,.25);margin-top:3px}
+.foot-links{list-style:none;display:flex;gap:2rem;flex-wrap:wrap}
+.foot-links a{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--or)}
+.foot-copy{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.72rem;color:rgba(255,255,255,.15)}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* ── BTN ── */
+.btn{font-family:var(--body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:.9rem 2rem;border-radius:2px;display:inline-flex;align-items:center;gap:8px;transition:all .2s;border:none;cursor:pointer}
+.btn-solid{background:var(--vert);color:var(--ivoire)}
+.btn-solid:hover{background:var(--vert-m)}
+.btn-outline{background:transparent;color:var(--vert);border:1px solid var(--vert)}
+.btn-outline:hover{background:var(--vert);color:var(--ivoire)}
+.btn-or{background:var(--or);color:var(--vert)}
+.btn-or:hover{background:var(--or-l)}
+.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5}
+
+/* ── TEAM ── */
+#team{background:var(--noir);padding:6rem 3rem;overflow:hidden}
+#team .s-eyebrow{color:var(--or-l)}
+#team .s-eyebrow::before{background:var(--or-l)}
+#team h2.s-title{color:var(--ivoire)}
+#team .s-sub{color:rgba(250,248,243,.45)}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:2px;
+  background:rgba(255,255,255,.05);
+  margin-top:3.5rem;
+}
+.team-card{
+  background:var(--noir);
+  position:relative;overflow:hidden;
+  cursor:default;
+  transition:background .3s;
+}
+.team-card:hover{background:#141414}
+
+/* Grande carte dirigeant — occupe 2 lignes */
+.team-card.lead{grid-row:1/3}
+
+.team-photo{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+.team-card.lead .team-photo{height:480px}
+.team-card:not(.lead) .team-photo{height:220px}
+
+.team-photo-img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:top center;
+  display:block;
+  filter:grayscale(20%) brightness(.9);
+  transition:transform .7s ease,filter .5s ease;
+}
+.team-card:hover .team-photo-img{
+  transform:scale(1.03);
+  filter:grayscale(0%) brightness(1);
+}
+
+/* Placeholder photo élégant */
+.team-photo-ph{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.team-card.lead .team-photo-ph{background:linear-gradient(160deg,#1a2a1a 0%,#0F3D22 100%)}
+.team-card:not(.lead) .team-photo-ph{background:linear-gradient(160deg,#1a1a2a 0%,#1B2A4A 100%)}
+
+.team-initials{
+  font-family:var(--display);
+  font-weight:700;
+  color:rgba(255,255,255,.06);
+  position:absolute;
+  bottom:-10px;right:-5px;
+  line-height:1;
+  user-select:none;
+}
+.team-card.lead .team-initials{font-size:9rem}
+.team-card:not(.lead) .team-initials{font-size:5rem}
+
+.team-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.8) 0%,transparent 50%);
+}
+.team-body{
+  padding:1.5rem;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.team-card.lead .team-body{padding:2rem}
+.team-nom{
+  font-family:var(--display);
+  font-weight:600;color:var(--ivoire);
+  margin-bottom:.3rem;
+}
+.team-card.lead .team-nom{font-size:1.4rem}
+.team-card:not(.lead) .team-nom{font-size:1.1rem}
+.team-role{
+  font-size:.72rem;font-weight:400;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--or);margin-bottom:.75rem;
+}
+.team-badge{
+  display:inline-block;
+  font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 10px;border:1px solid rgba(201,168,76,.3);border-radius:2px;
+  color:rgba(201,168,76,.7);margin-bottom:.75rem;
+}
+.team-desc{
+  font-size:.82rem;font-weight:300;
+  color:rgba(255,255,255,.45);
+  line-height:1.7;
+}
+.team-card.lead .team-desc{max-width:360px}
+.team-line{
+  position:absolute;bottom:0;left:0;
+  width:0;height:2px;background:var(--or);
+  transition:width .5s ease;
+}
+.team-card:hover .team-line{width:100%}
+
+/* Responsive team */
+@media(max-width:960px){
+  .team-grid{grid-template-columns:1fr}
+  .team-card.lead{grid-row:auto}
+  .team-card.lead .team-photo{height:320px}
+  
+}
+@media(max-width:960px){
+  .biens-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .bien-card:first-child{grid-row:auto}
+  .bien-card:first-child .bien-photo{min-height:320px}
+  .bien-card:not(:first-child) .bien-photo{height:260px}
+  .avis-grid,.offre-grid,.quartiers-grid{grid-template-columns:1fr}
+  .contact-grid,.estim-layout{grid-template-columns:1fr;gap:2rem}
+  nav .nav-links{display:none}
+  nav{padding:0 1.5rem}
+  .s{padding:4rem 1.5rem}
+  .hero-bar{flex-direction:column;align-items:flex-start;gap:1rem;padding:1.5rem}
+  .hbar-fields{flex-wrap:wrap}
+  .stats-sep{display:none}
+  .hero-title{font-size:3rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-box"></div>
+    <span class="nav-logo-name">Côté Immo</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#biens">Biens</a></li>
+    <li><a href="#estimation">Estimation</a></li>
+    <li><a href="#quartiers">Quartiers</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#team">Équipe</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img"
+    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=85&fit=crop"
+    alt="Belle propriété Mouscron">
+  <div class="hero-overlay"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Agence Immobilière — Mouscron</div>
+    <h1 class="hero-title">
+      Votre bien mérite
+      <strong>le bon côté</strong>
+    </h1>
+    <p class="hero-sub">Estimation gratuite · Accompagnement de A à Z · Ancrage local depuis 12 ans</p>
+  </div>
+
+  <!-- Barre d'action Sotheby's pattern -->
+  <div class="hero-bar">
+    <div class="hero-bar-tabs">
+      <button class="hbar-tab active" onclick="setBarTab('vente',this)">Acheter</button>
+      <button class="hbar-tab" onclick="setBarTab('location',this)">Louer</button>
+      <button class="hbar-tab" onclick="setBarTab('estimer',this)">Estimer</button>
+    </div>
+    <div class="hbar-sep"></div>
+    <div class="hbar-fields">
+      <div class="hbar-field">
+        <span class="hbar-label">Ville</span>
+        <select class="hbar-select">
+          <option>Toutes les villes</option>
+          <option>Mouscron</option>
+          <option>Herseaux</option>
+          <option>Dottignies</option>
+          <option>Luingne</option>
+        </select>
+      </div>
+      <div class="hbar-sep"></div>
+      <div class="hbar-field">
+        <span class="hbar-label">Type de bien</span>
+        <select class="hbar-select">
+          <option>Tous types</option>
+          <option>Maison</option>
+          <option>Appartement</option>
+          <option>Terrain</option>
+        </select>
+      </div>
+      <div class="hbar-sep"></div>
+      <div class="hbar-field">
+        <span class="hbar-label">Budget max</span>
+        <select class="hbar-select">
+          <option>Sans limite</option>
+          <option>200 000 €</option>
+          <option>300 000 €</option>
+          <option>500 000 €</option>
+        </select>
+      </div>
+    </div>
+    <button class="hbar-btn" onclick="document.getElementById('biens').scrollIntoView({behavior:'smooth'})">Rechercher →</button>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Défiler</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-n">340<span style="font-size:1.5rem;color:var(--or)">+</span></div><div class="stat-l">Biens vendus</div></div>
+    <div class="stats-sep"></div>
+    <div class="stat"><div class="stat-n">12<span style="font-size:1.5rem;color:var(--or)"> ans</span></div><div class="stat-l">Expertise locale</div></div>
+    <div class="stats-sep"></div>
+    <div class="stat"><div class="stat-n">48<span style="font-size:1.5rem;color:var(--or)">h</span></div><div class="stat-l">Délai estimation</div></div>
+    <div class="stats-sep"></div>
+    <div class="stat"><div class="stat-n">4.9<span style="font-size:1.5rem;color:var(--or)">★</span></div><div class="stat-l">Avis clients</div></div>
+  </div>
+</div>
+
+<!-- BIENS — pattern Sotheby's -->
+<section id="biens" class="s" style="padding-bottom:0">
+  <div class="s-container">
+    <div class="biens-header">
+      <div>
+        <div class="s-eyebrow reveal">Sélection du moment</div>
+        <h2 class="s-title reveal d1">Nos biens<br><strong>disponibles</strong></h2>
+      </div>
+      <a href="#" class="btn btn-outline reveal d1">Voir tous les biens <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+  <div style="max-width:1140px;margin:0 auto;padding:0 3rem 6rem">
+    <div class="biens-grid reveal">
+
+      <!-- Bien 1 — Grande carte gauche (2 lignes) -->
+      <div class="bien-card">
+        <div class="bien-photo">
+          <img
+            src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=95&fit=crop&crop=center"
+            alt="Maison de caractère Mouscron">
+          <div class="bien-overlay"></div>
+          <div class="bien-body">
+            <span class="bien-badge vente">À vendre</span>
+            <div class="bien-lieu">Mouscron — Rue des Acacias</div>
+            <div class="bien-prix">235 000 €</div>
+            <div class="bien-specs"><span>Maison</span><span>·</span><span>145 m²</span><span>·</span><span>4 chambres</span></div>
+            <a href="#" class="bien-lien">Découvrir le bien <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+          <div class="bien-line"></div>
+        </div>
+      </div>
+
+      <!-- Bien 2 — Haut droite -->
+      <div class="bien-card">
+        <div class="bien-photo">
+          <img
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=95&fit=crop&crop=center"
+            alt="Villa contemporaine Herseaux">
+          <div class="bien-overlay"></div>
+          <div class="bien-body">
+            <span class="bien-badge vente">À vendre</span>
+            <div class="bien-lieu">Herseaux — Allée des Marronniers</div>
+            <div class="bien-prix">319 000 €</div>
+            <div class="bien-specs"><span>Villa</span><span>·</span><span>178 m²</span><span>·</span><span>5 chambres</span></div>
+            <a href="#" class="bien-lien">Découvrir <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+          <div class="bien-line"></div>
+        </div>
+      </div>
+
+      <!-- Bien 3 — Bas droite -->
+      <div class="bien-card">
+        <div class="bien-photo">
+          <img
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=95&fit=crop&crop=center"
+            alt="Maison contemporaine Dottignies">
+          <div class="bien-overlay"></div>
+          <div class="bien-body">
+            <span class="bien-badge loc">À louer</span>
+            <div class="bien-lieu">Dottignies — Rue du Vieux Pont</div>
+            <div class="bien-prix">980 € <span style="font-size:1rem;font-weight:300">/ mois</span></div>
+            <div class="bien-specs"><span>Maison</span><span>·</span><span>112 m²</span><span>·</span><span>3 chambres</span></div>
+            <a href="#" class="bien-lien">Découvrir <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+          <div class="bien-line"></div>
+        </div>
+      </div>
+
+    </div>
+    <a href="#" class="voir-tout">Découvrir toute notre sélection →</a>
+  </div>
+</section>
+
+<!-- ESTIMATION -->
+<section id="estimation" class="s">
+  <div class="s-container">
+    <div class="estim-layout">
+      <div class="estim-left reveal">
+        <div class="s-eyebrow">Vendeurs</div>
+        <h2 class="s-title">Combien vaut<br><strong>votre bien ?</strong></h2>
+        <p class="estim-promesse">"Une estimation précise basée sur les vraies transactions du marché local — pas une moyenne nationale."</p>
+        <ul class="estim-points">
+          <li class="estim-point">Réponse personnalisée sous 48h</li>
+          <li class="estim-point">Basée sur les données réelles du secteur</li>
+          <li class="estim-point">Sans engagement, sans démarchage</li>
+          <li class="estim-point">Un expert local dédié à votre dossier</li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <div class="form-shell">
+          <div class="form-tabs" id="ftabs">
+            <div class="ftab active" id="ft1">Type</div>
+            <div class="ftab" id="ft2">Ville</div>
+            <div class="ftab" id="ft3">Délai</div>
+            <div class="ftab" id="ft4">Contact</div>
+          </div>
+          <div class="form-inner">
+            <!-- Step 1 -->
+            <div class="fstep active" id="fs1">
+              <div class="fstep-num">01</div>
+              <p class="fstep-q">Quel type de bien ?</p>
+              <div class="fopts">
+                <div class="fopt" data-v="Appartement" onclick="selOpt(this,'type')">🏢 Appartement</div>
+                <div class="fopt" data-v="Maison" onclick="selOpt(this,'type')">🏡 Maison</div>
+                <div class="fopt" data-v="Terrain" onclick="selOpt(this,'type')">🌿 Terrain</div>
+                <div class="fopt" data-v="Autre" onclick="selOpt(this,'type')">🔑 Autre</div>
+              </div>
+              <div class="fnav"><span></span><button class="fbtn-next" onclick="goNext(1)">Continuer →</button></div>
+            </div>
+            <!-- Step 2 -->
+            <div class="fstep" id="fs2">
+              <div class="fstep-num">02</div>
+              <p class="fstep-q">Dans quelle ville ?</p>
+              <div class="fopts" style="grid-template-columns:repeat(3,1fr)">
+                <div class="fopt" data-v="Mouscron" onclick="selOpt(this,'ville')">Mouscron</div>
+                <div class="fopt" data-v="Herseaux" onclick="selOpt(this,'ville')">Herseaux</div>
+                <div class="fopt" data-v="Dottignies" onclick="selOpt(this,'ville')">Dottignies</div>
+                <div class="fopt" data-v="Luingne" onclick="selOpt(this,'ville')">Luingne</div>
+                <div class="fopt" data-v="Autre" onclick="selOpt(this,'ville')">Autre</div>
+              </div>
+              <div class="fnav"><button class="fbtn-back" onclick="goPrev(2)">← Retour</button><button class="fbtn-next" onclick="goNext(2)">Continuer →</button></div>
+            </div>
+            <!-- Step 3 -->
+            <div class="fstep" id="fs3">
+              <div class="fstep-num">03</div>
+              <p class="fstep-q">Dans quel délai ?</p>
+              <div class="fopts">
+                <div class="fopt" data-v="Moins de 3 mois" onclick="selOpt(this,'delai')">Moins de 3 mois</div>
+                <div class="fopt" data-v="3 à 6 mois" onclick="selOpt(this,'delai')">3 à 6 mois</div>
+                <div class="fopt" data-v="6 mois à 1 an" onclick="selOpt(this,'delai')">6 mois à 1 an</div>
+                <div class="fopt" data-v="Je me renseigne" onclick="selOpt(this,'delai')">Je me renseigne</div>
+              </div>
+              <div class="fnav"><button class="fbtn-back" onclick="goPrev(3)">← Retour</button><button class="fbtn-next" onclick="goNext(3)">Continuer →</button></div>
+            </div>
+            <!-- Step 4 -->
+            <div class="fstep" id="fs4">
+              <div class="fstep-num">04</div>
+              <p class="fstep-q">Comment vous contacter ?</p>
+              <div class="ffields">
+                <div class="ffield"><label>Prénom</label><input type="text" id="prenom" placeholder="Marie" autocomplete="given-name"></div>
+                <div class="ffield"><label>Nom</label><input type="text" id="nom" placeholder="Dupont" autocomplete="family-name"></div>
+                <div class="ffield full"><label>Email *</label><input type="email" id="email" placeholder="marie@exemple.com" required autocomplete="email"></div>
+                <div class="ffield full"><label>Téléphone (optionnel)</label><input type="tel" id="tel" placeholder="+32 4XX XX XX XX"></div>
+              </div>
+              <div class="fnav">
+                <button class="fbtn-back" onclick="goPrev(4)">← Retour</button>
+                <button class="fbtn-next" onclick="submitForm()">Recevoir mon estimation →</button>
+              </div>
+              <p class="fmicro"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Aucun démarchage — données confidentielles</p>
+            </div>
+            <!-- Succès -->
+            <div class="fsuccess" id="fsuccess">
+              <div class="fcheck"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <h3>Demande bien reçue</h3>
+              <p>Un expert vous contacte sous 48h avec une estimation précise. Vérifiez votre boîte mail.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUARTIERS -->
+<section id="quartiers">
+  <div class="s-container">
+    <div class="s-eyebrow reveal">Notre territoire</div>
+    <h2 class="s-title reveal d1">Les quartiers<br><strong>que nous connaissons</strong></h2>
+    <p class="s-sub reveal d2">Chaque ville a ses particularités, ses prix, ses acheteurs. On les connaît toutes.</p>
+  </div>
+  <div style="max-width:1140px;margin:2rem auto 0;padding:0 3rem">
+    <div class="quartiers-grid reveal d2">
+      <div class="quartier-card">
+        <img class="qcard-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&fit=crop" alt="Mouscron">
+        <div class="qcard-overlay"></div>
+        <div class="qcard-body">
+          <div class="qcard-name">Mouscron</div>
+          <div class="qcard-info">Centre-ville · résidentiel</div>
+        </div>
+        <div class="qcard-line"></div>
+      </div>
+      <div class="quartier-card">
+        <img class="qcard-img" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&fit=crop" alt="Herseaux">
+        <div class="qcard-overlay"></div>
+        <div class="qcard-body">
+          <div class="qcard-name">Herseaux</div>
+          <div class="qcard-info">Calme · pavillonnaire</div>
+        </div>
+        <div class="qcard-line"></div>
+      </div>
+      <div class="quartier-card">
+        <img class="qcard-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="Dottignies">
+        <div class="qcard-overlay"></div>
+        <div class="qcard-body">
+          <div class="qcard-name">Dottignies</div>
+          <div class="qcard-info">Villages · espaces verts</div>
+        </div>
+        <div class="qcard-line"></div>
+      </div>
+      <div class="quartier-card">
+        <img class="qcard-img" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80&fit=crop" alt="Luingne">
+        <div class="qcard-overlay"></div>
+        <div class="qcard-body">
+          <div class="qcard-name">Luingne</div>
+          <div class="qcard-info">Familial · verdoyant</div>
+        </div>
+        <div class="qcard-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis" class="s">
+  <div class="s-container">
+    <div class="s-eyebrow reveal">Témoignages</div>
+    <h2 class="s-title reveal d1">Ce que disent<br><strong>nos clients</strong></h2>
+    <div class="avis-grid reveal d2">
+      <div class="avis-card">
+        <div class="avis-quote">"</div>
+        <div class="avis-stars">★★★★★</div>
+        <p class="avis-txt">Estimation réaliste, vente conclue en 6 semaines. L'équipe est réactive et ne nous a jamais laissés dans le flou.</p>
+        <div class="avis-by"><div class="avis-av">SV</div><div><div class="avis-nom">Sophie V.</div><div class="avis-lieu">Mouscron</div></div></div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-quote">"</div>
+        <div class="avis-stars">★★★★★</div>
+        <p class="avis-txt">On cherchait depuis un an. En deux semaines avec Côté Immo, on avait trouvé. Ils connaissent vraiment leur secteur.</p>
+        <div class="avis-by"><div class="avis-av">MD</div><div><div class="avis-nom">Marc & Delphine</div><div class="avis-lieu">Herseaux</div></div></div>
+      </div>
+      <div class="avis-card">
+        <div class="avis-quote">"</div>
+        <div class="avis-stars">★★★★★</div>
+        <p class="avis-txt">L'estimation était précise, la mise en vente rapide. J'ai été informée à chaque étape sans avoir à relancer.</p>
+        <div class="avis-by"><div class="avis-av">CL</div><div><div class="avis-nom">Christine L.</div><div class="avis-lieu">Dottignies</div></div></div>
+      </div>
+    </div>
+    <div class="avis-global reveal">
+      <div class="ag-n">4.9</div>
+      <div><div class="ag-stars">★★★★★</div><div class="ag-count">47 avis clients vérifiés</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="s-container">
+    <div class="s-eyebrow reveal">L'équipe</div>
+    <h2 class="s-title reveal d1" style="color:var(--ivoire)">Des experts locaux<br><strong style="color:var(--or-l)">qui vous ressemblent</strong></h2>
+    <p class="s-sub reveal d2">Agréés IPI, formés, implantés à Mouscron depuis 2006. Pas une franchise nationale — une équipe qui connaît votre rue par son prénom.</p>
+  </div>
+
+  <div style="max-width:1140px;margin:0 auto;padding:0 3rem 6rem">
+    <div class="team-grid reveal d1">
+
+      <!-- Emile — Lead -->
+      <div class="team-card lead">
+        <div class="team-photo">
+          <div class="team-photo-ph">
+            <span class="team-initials">ES</span>
+            <div class="team-overlay"></div>
+          </div>
+        </div>
+        <div class="team-body">
+          <div class="team-badge">IPI 503 181 · Dirigeant</div>
+          <div class="team-nom">Emile Seguin</div>
+          <div class="team-role">Directeur — Agent & Syndic Agréé</div>
+          <p class="team-desc">Master en Droit Privé, spécialisation procédure civile. Actif dans l'immobilier depuis plus de 21 ans à Mouscron. Expert reconnu sur les transactions transfrontalières franco-belges.</p>
+        </div>
+        <div class="team-line"></div>
+      </div>
+
+      <!-- Priscilla -->
+      <div class="team-card">
+        <div class="team-photo">
+          <div class="team-photo-ph">
+            <span class="team-initials">P</span>
+            <div class="team-overlay"></div>
+          </div>
+        </div>
+        <div class="team-body">
+          <div class="team-nom">Priscilla</div>
+          <div class="team-role">Déléguée Commerciale</div>
+          <p class="team-desc">15 ans d'expérience. Votre interlocutrice pour les projets de vente.</p>
+        </div>
+        <div class="team-line"></div>
+      </div>
+
+      <!-- Fauve -->
+      <div class="team-card">
+        <div class="team-photo">
+          <div class="team-photo-ph">
+            <span class="team-initials">F</span>
+            <div class="team-overlay"></div>
+          </div>
+        </div>
+        <div class="team-body">
+          <div class="team-nom">Fauve</div>
+          <div class="team-role">Conseillère Location</div>
+          <p class="team-desc">15 ans d'expérience. Spécialiste des biens à louer sur tout le grand Mouscron.</p>
+        </div>
+        <div class="team-line"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="s-container">
+    <div class="s-eyebrow reveal">Contact</div>
+    <h2 class="s-title reveal d1">Une question ?<br><strong>On vous répond vite.</strong></h2>
+    <div class="contact-grid">
+      <div class="reveal d1">
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="cinfo-lbl">Adresse</div><div class="cinfo-val">Rue de Courtrai 28<br>7700 Mouscron, Belgique</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 1.995-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.995-.995a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="cinfo-lbl">Téléphone</div><div class="cinfo-val">+32 (0)56 XX XX XX</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="cinfo-lbl">Email</div><div class="cinfo-val">info@coteimmo.be</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="cinfo-lbl">Horaires</div><div class="cinfo-val">Lun–Ven 9h–18h<br>Sam 10h–13h sur RDV</div></div>
+        </div>
+      </div>
+      <div class="cform reveal d2">
+        <p class="cform-title">Envoyez-nous un message</p>
+        <div class="cfields">
+          <div class="cfield"><label>Nom complet</label><input type="text" placeholder="Jean Dupont"></div>
+          <div class="cfield"><label>Email</label><input type="email" placeholder="jean@exemple.com"></div>
+          <div class="cfield"><label>Message</label><textarea placeholder="Votre message..."></textarea></div>
+          <button class="cbtn">Envoyer →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-logo">Côté <span>Immo</span></div>
+      <div class="foot-slogan">"Prenez l'immobilier du Bon Côté"</div>
+    </div>
+    <ul class="foot-links">
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Confidentialité</a></li>
+      <li><a href="#">Espace propriétaires</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </div>
+  <div class="foot-copy">
+    <span>© 2024 Côté Immo — Rue de Courtrai 28, 7700 Mouscron</span>
+    <span>Agence immobilière agréée IPI</span>
+  </div>
+</footer>
+
+<script>
+// Nav
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60));
+
+// Hero bar tabs
+function setBarTab(type, el) {
+  document.querySelectorAll('.hbar-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  if(type==='estimer') document.getElementById('estimation').scrollIntoView({behavior:'smooth'});
+}
+
+// Formulaire
+let fd={type:'',ville:'',delai:''}, step=1;
+function selOpt(el,field){
+  el.closest('.fopts').querySelectorAll('.fopt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel'); fd[field]=el.dataset.v;
+}
+function updateTabs(n){
+  for(let i=1;i<=4;i++){
+    const t=document.getElementById('ft'+i);
+    t.classList.remove('active','done');
+    if(i<n) t.classList.add('done');
+    else if(i===n) t.classList.add('active');
+  }
+}
+function goNext(from){
+  if(from===1&&!fd.type){shake(from);return}
+  if(from===2&&!fd.ville){shake(from);return}
+  if(from===3&&!fd.delai){shake(from);return}
+  document.getElementById('fs'+from).classList.remove('active');
+  document.getElementById('fs'+(from+1)).classList.add('active');
+  step=from+1; updateTabs(step);
+}
+function goPrev(from){
+  document.getElementById('fs'+from).classList.remove('active');
+  document.getElementById('fs'+(from-1)).classList.add('active');
+  step=from-1; updateTabs(step);
+}
+function shake(n){
+  const el=document.getElementById('fs'+n);
+  let x=0,d=1;
+  const a=setInterval(()=>{
+    el.style.transform='translateX('+x+'px)';
+    x+=d*6;d=-d;
+    if(Math.abs(x)>12){clearInterval(a);el.style.transform=''}
+  },40);
+}
+function submitForm(){
+  const email=document.getElementById('email').value;
+  if(!email){document.getElementById('email').focus();document.getElementById('email').style.borderColor='#c0392b';return}
+  document.querySelectorAll('.fstep').forEach(q=>q.classList.remove('active'));
+  document.getElementById('fsuccess').classList.add('active');
+  for(let i=1;i<=4;i++){const t=document.getElementById('ft'+i);t.classList.remove('active');t.classList.add('done')}
+  fetch('https://n8n-production-a147.up.railway.app/webhook/coteimmo-vendeur',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({prenom:document.getElementById('prenom').value,nom:document.getElementById('nom').value,email,tel:document.getElementById('tel').value,...fd})
+  }).catch(e=>console.error(e));
+}
+
+// Reveal
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
